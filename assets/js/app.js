@@ -394,16 +394,13 @@ const switchTab = (tabId) => {
   });
 };
 
-// Event Listeners Setup
 document.addEventListener("DOMContentLoaded", async () => {
   await renderCards();
   setupSearch();
 
-  // Initialize popovers
   const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
   popoverTriggerList.map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
 
-  // Tab event listeners
   document.getElementById("home-tab")?.addEventListener("click", async () => {
     await renderCards();
     switchTab("coins");
@@ -422,6 +419,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("about-tab")?.addEventListener("click", () => switchTab("about"));
   document.getElementById("pali-tab")?.addEventListener("click", () => switchTab("pali"));
 
-  // Set default tab
   switchTab("coins");
 });
