@@ -1,181 +1,158 @@
-@font-face{
-    font-family: Sunday;
-    src: url('/assets/fonts/Sunday\ Wind.ttf'); 
+html,
+body {
+  height: auto;
+}
+#coMainTitle {
+  text-align: center;
+}
+body {
+  background-color: #212121;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-y: auto;
+}
+section {
+  display: none;
 }
 
-@keyframes fadeIn {
-    from{opacity: 0;} to {opacity: 1;} 
+#mainTitle {
+  margin: 0;
+  color: rgb(175 174 174);
+  font-size: 45px;
+  font-weight: bold;
+  font-family: serif;
+  box-shadow: 0 4px 6px rgba(136, 115, 115, 0.1);
+}
+.header-image {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 50px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#divMainTitle {
+  background-color: rgb(205, 199, 199);
+  padding: 20px;
 
+  border-bottom: 2px solid #000000;
+  box-shadow: 9px 10px 15px rgb(0 0 0 / 10%) (136, 115, 115, 0.1);
+  background-size: cover;
+  background-image: url("/assets/images/crypto-quarterly-outlook_500082151_banner.png");
+}
+#navBarDiv {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
+}
+#inputSearchBar {
+  margin-left: 150px;
+  margin-right: 20px;
+  width: 200px;
+}
+#myTabContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  text-align: center;
+  flex-direction: column;
+}
+#cryptoCards {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  padding: 15px;
+  overflow-y: auto;
+}
+.card-title {
+  text-align: left;
 }
 
+.card-body {
+  background-color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+}
+.coin-card {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 500px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+#switch {
+  direction: rtl;
+}
+.cardTitleCoin {
+  text-decoration: underline;
+}
+.modal-body {
+  color: #000000;
+  overflow-y: auto;
+  max-height: 400px;
+}
 @media screen and (max-width: 768px) {
-    textarea {
-        width: 90%; 
-        height: 120px; 
-    }
-
-    .form-control {
-        width: 100%;
-    }
-
-    .task {
-        width: 150px; 
-        height: 120px;
-    }
-}
-body{
-    font-family: Sunday, sans-serif;
-    height: 100%;
-    margin: 0;
-    background-image: url('/assets/images/tile.jpg') ;
-}
-
-header{
-    font-family: Sunday;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 70px;
-
-}
-
-button{
-    width: 150px;
-    height: 39px;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
+  #cryptoCards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-
-  .input-container{
-    background-image: url('/assets/images/formbg.jpg');
-  }
-
-textarea{
-    background-image: url('/assets/images/formbg.jpg');
-    opacity: 1;
-    font-size: large;
-    display: flex;
-    width: 600px;
-    height: 150px;
-    resize: none;padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-
+}
+.img-fluid {
+  width: 30px;
 }
 
-.form-control {
-    width: 150px;
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
 }
 
-  .inputCenter{
-   margin-left: 360px;
-   justify-content: center;
-   align-items: center;
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#tamirImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.form-controls {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+.about-text {
+  position: relative;
+  z-index: 1;
 }
 
-.buttons {
-    display: flex;
-    gap: 10px;
+.about-text p,
+.about-text h3,
+.about-text ul {
+  position: relative;
+  z-index: 1;
 }
 
-#tasks {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+#tamirImg {
+  width: 120px;
+  height: 150px;
 }
-
-.task {
-    background-image:url("/assets/images/notebg.png");
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 150px;
-    margin-right: 20px;
-    position: relative;
-    box-sizing: border-box;
-    padding: 10px;
-    overflow: hidden;
-    justify-content: space-between;
-   
-}
-    
-.task-description {
-    
-    overflow-y: auto; 
-    max-height: 100px; 
-    box-sizing: border-box;  
-    font-size: 14px; 
-    word-wrap: break-word; 
-    white-space: pre-wrap; 
-}
-
-.task-description::-webkit-scrollbar {
-    width: 8px;
-}
-
-.task-description::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
-.task-description::-webkit-scrollbar-thumb:hover {
-    background-color: #212020;
-}
-.task > div:nth-child(2) {
-    overflow-y: scroll; 
-    max-height: 100px; 
-}
-
-.task > div:nth-child(1) {
-
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.task > .xIcon > i {
-    display: none;
-    position: absolute;
-    font-size:x-large ;
-    color: aliceblue;
-    background-color: black;
-    right: 25px;
-    top: 18px;
-    border-radius: 3px;
-}
-
-.xIcon{
-    position: relative;
-    
-
-    }
-.task:hover > .xIcon > i {
-    display: block;
-}
-
-.task:last-child{
-    animation: fadeIn 1s ease-in-out;
-}
-
-.task > .xIcon > i:hover {
-    cursor: pointer;
-}
-#dateTime{
-font-size: small;
+.popover .img-fluid {
+  width: 100%;
+  height: auto;
 }
